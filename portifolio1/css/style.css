@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Fredoka+One&display=swap');
+html,body{
+    background-image: linear-gradient(90deg, rgb(50, 26, 70), rgb(73, 22, 121));
+    background-color: linear;
+    background-size: 400% 400%;
+    font-family: 'Fredoka One', cursive;
+    animation: bg 4s infinite ease-in-out;
+}
+@keyframes bg {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+
+    }
+}
+#intro{
+    display: flex; 
+    flex-direction:column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     transition: 2s;
+     position:relative;
+
+}
+#ovni{
+    width: 100px;
+    animation: ovni 5s ease-in-out;
+    transition: 3s;
+
+}
+#eu{
+    width: 250px;
+    opacity: 0;
+    animation: desova 3.5s infinite;
+    transition: 3s;
+}
+
+@keyframes ovni{
+    0%{
+        transform: translateY(-300%);
+        
+    }
+    50%{
+        transform: translateY(0%);
+
+        width: 500px;
+    }
+    55%{
+        transform: translateY(0%);
+    }
+    59%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-300%);
+        width: 0px ;
+
+    }
+}
+
+@keyframes desova {
+    0%{
+        transform: translateY(-10%);
+    }
+    50%{
+        transform: translateY(-0%);
+
+    }
+    100%{
+        transform: translateY(-10%);
+    }
+}
+
+/* ---------------------Carrosel-------------------------------------------------  */
+
+.conteudo{
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centroCarrosel{
+    width: 250px;
+ 
+}
+.carrosel {
+    -webkit-perspective: 250px;
+    -moz-perspective: 250px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 100px;
+}
+
+@-webkit-keyframes efeitoCarrosel {
+    from {
+        -webkit-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -webkit-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes efeitoCarrosel {
+    from {
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+.caixa__card {
+    position: absolute;
+    border-radius: 100%;
+    -webkit-animation-name: efeitoCarrosel;
+    -moz-animation-name: efeitoCarrosel;
+    -webkit-animation-duration: 18s;
+    -moz-animation-duration: 18s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+.caixa__card img{
+    width: 90px;
+    height: 100px;
+
+}
+.caixa__card.cc__1 {
+    -webkit-animation-delay: -3s;
+    -moz-animation-delay: -3s;
+}
+
+.caixa__card.cc__2 {
+
+    -webkit-animation-delay: -6s;
+    -moz-animation-delay: -6s;
+}
+
+.caixa__card.cc__3 {
+
+    -webkit-animation-delay: -9s;
+    -moz-animation-delay: -9s;
+}
+
+.caixa__card.cc__4 {
+    -webkit-animation-delay: -12s;
+    -moz-animation-delay: -12s;
+}
+
+.caixa__card.cc__5 {
+    -webkit-animation-delay: -15s;
+    -moz-animation-delay: -15s;
+}
+
+.caixa__card.cc__6 {
+
+}
+
+/* ---------------------------- animacao scroll---------------*/
+[data-scroll]{
+    opacity: 0;
+    transition: 0.8s;
+}
+[data-scroll="left"]{
+    transform: translate3d(-50px,0px,0px)
+
+}
+.animacaoScroll{
+    opacity: 1;
+    transform: translate3d(0px,0px,0px)
+}
