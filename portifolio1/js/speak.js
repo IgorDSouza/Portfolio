@@ -1,8 +1,8 @@
 var contentSpeak='Olá, Sou Igor! ';
 var contentSpeak2='Dev Junior em busca de conhecimento👽!';
-var contentSpeak3='Nessa viagem tive contato com algumas tecnologias e sigo estudando constantemente 🤓 ';
 
-var vel = 70;
+
+var vel = 50;
 var i=0;
 var j=0;
 var k=0;
@@ -23,14 +23,6 @@ function content2(){
     }
 }
 
-function content3(){
-    if(j<contentSpeak3.length){
-        document.getElementById('speak3').innerHTML += contentSpeak3.charAt(k);
-        k++;
-        setTimeout(content3,80);
-          
-    }
-}
 
 setTimeout(content1,5500);
 setTimeout(content2,7600);

@@ -21,7 +21,6 @@ function scroll(){
     data.forEach(function(element){
         if(TopoTela > element.offsetTop){
             element.classList.add('animacaoScroll')
-             content3();
         }
     })
       
