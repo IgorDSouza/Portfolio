@@ -30,6 +30,5 @@ function scroll(){
 if(data.length){
     window.addEventListener('scroll',debounce(function(){
     scroll();   
-    console.log('sdfs')
 },200));
 }

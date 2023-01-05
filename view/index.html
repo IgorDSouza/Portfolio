@@ -26,22 +26,22 @@
         <div style="width: 30%;text-align: center;">
             <p id="speak3" style="font-size: 35px; margin: 0px; ">Nessa viagem tive contato com algumas tecnologias e sigo estudando constantemente 🤓</p>
         </div>    
-        <div class="carrosel">
+        <div class="carrosel" onmouseover="mouseOn()" onmouseleave="mouseOff()">
             <img class="centroCarrosel" src="../img/eu2.png"/>
        
-            <div class="caixa__card cc__1"><img src="../img/html.png"/></div>
-            <div class="caixa__card cc__2"><img src="../img/css.png"/></div>
-            <div class="caixa__card cc__3"><img src="../img/js.png"/></div>
-            <div class="caixa__card cc__4"><img src="../img/php.png"/></div>
-            <div class="caixa__card cc__5"><img src="../img/lar.png"/></div>
-            <div class="caixa__card cc__6"><img src="../img/git.png"/></div>
+            <div  class="caixa__card cc__1"><img src="../img/html.png"/></div>
+            <div  class="caixa__card cc__2"><img src="../img/css.png"/></div>
+            <div   class="caixa__card cc__3"><img src="../img/js.png"/></div>
+            <div   class="caixa__card cc__4"><img src="../img/php.png"/></div>
+            <div   class="caixa__card cc__5"><img src="../img/lar.png"/></div>
+            <div   class="caixa__card cc__6"><img src="../img/git.png"/></div>
         </div>
     </div>
 
 
     <div class="projetoContainer" data-scroll="right">
         <div style="width: 60%;text-align: center;">
-            <p id="speak4" style="font-size: 35px; margin: 0px; ">Usei essas tecnologias em projetos e freelances, enviei alguns deles até voce!👨🏾‍💻</p>
+            <p id="speak4" style="font-size: 35px; margin: 0px; ">Usei essas tecnologias em projetos e freelances, enviei alguns deles até voce!👨🏾‍💻</p><br><br>
         </div> 
 
     <div class="projetos">
@@ -74,6 +74,21 @@
     <script src="../js/jsOvni.js"></script>
     <script src="../js/speak.js"></script>
     <script src="../js/scroll.js"></script>
+    <script>
+        
+       var divs= document.getElementsByClassName("caixa__card")
+
+         function mouseOn(){
+            for(const div of divs){
+                div.style.animationPlayState = "paused";
+            }   
+        }
+        function mouseOff(){
+            for(const div of divs){
+                div.style.animationPlayState = "running";
+            }   
+        }
+    </script>
 
 
 </body>
