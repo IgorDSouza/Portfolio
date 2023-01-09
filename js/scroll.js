@@ -32,3 +32,16 @@ if(data.length){
     scroll();   
 },200));
 }
+ 
+var divs= document.getElementsByClassName("caixa__card")
+
+function mouseOn(){
+   for(const div of divs){
+       div.style.animationPlayState = "paused";
+   }   
+}
+function mouseOff(){
+   for(const div of divs){
+       div.style.animationPlayState = "running";
+   }   
+}

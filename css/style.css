@@ -63,6 +63,46 @@ html,body{
 
     }
 }
+@media (min-width:1000px){
+    #eu{
+        width: 300px;
+       display:inherit;
+    }
+    #intro{
+        flex-direction:unset;
+    }
+    #speak{
+        font-size:2.5rem;
+
+    }
+    #speak2{
+        font-size:2rem;
+    }
+    @keyframes ovni{
+        0%{
+            transform: translateY(-300%);
+            
+        }
+        50%{
+            transform: translateY(0%);
+    
+            width: 500px;
+        }
+        55%{
+            transform: translateY(0%);
+    
+        }
+        59%{
+            transform: translateY(0%);
+    
+        }
+        100%{
+            transform: translateY(-300%);
+            width: 0px ;
+    
+        }
+    }
+}
 
 @keyframes desova {
     0%{
@@ -257,13 +297,83 @@ visibility: hidden;
 .divC:hover .legenda{
     visibility: visible;
 }
-.proj1{
+.projup{
     animation: desova 3s infinite ease-in-out;
     -webkit-animation-delay: -1s;
 
 }
-.proj2{
+.projdown{
     animation: desova 3s infinite ease-in-out;
     -webkit-animation-delay: -2s;
 
+}
+.contatos{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+    
+}
+.contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.linkedin{
+    background-image: url("../img/linkedin.png");
+    height:200px ;
+    width: 200px;
+    background-size: contain;
+}
+.github{
+    background-image: url("../img/git.png");
+    height:200px ;
+    width: 200px;
+    background-size: contain;
+}
+.email{
+    background-image: url("../img/email.png");
+    height:200px ;
+    width: 200px;
+    background-size: contain;
+}
+.telefone{
+    background-image: url("../img/telefone.png");
+    height:200px ;
+    width: 200px;
+    background-size: contain;
+}
+.navLink{
+    background-image: url("../img/nav.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 0px;
+    right: 30px;
+    animation: voar 3s infinite ease-in-out;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+.links{
+    display: flex;
+flex-direction: column;
+justify-content: end;
+align-items: center;
+}
+.links a{
+    text-decoration: none;    
+    color: black;
+}
+@-moz-keyframes voar {
+    0% {
+        -moz-transform: rotate3d(0,0,1,5deg);    }
+    50%{
+        -moz-transform: rotate3d(0,0,1,0deg);    }
+    100% {
+        -moz-transform: rotate3d(0,0,1,5deg);    }
 }
