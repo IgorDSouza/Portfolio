@@ -489,7 +489,7 @@ p.legenda{
         font-size: 18px !important;
     }
     #intro{
-        height: 80vh;
+        height: 68vh;
     }
     #ovni{
         width: 50px;
@@ -567,13 +567,6 @@ p.legenda{
         width: 80px;
       
     }
-    
-    .cardProj:hover{
-            
-            width: 220px;
-            border-radius: 10px;
-    
-    }
     @-webkit-keyframes efeitoCarrosel {
         from {
             -webkit-transform: rotateY(360deg) translateZ(85px) rotateY(-360deg);
@@ -646,7 +639,7 @@ p.legenda{
         }
         .cardProj:hover{
         
-            width: 150px;
+            width: 80px;
             border-radius: 0px;
     }
     }
