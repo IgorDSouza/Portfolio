@@ -488,6 +488,9 @@ p.legenda{
     p.legenda{
         font-size: 18px !important;
     }
+    #intro{
+        height: 80vh;
+    }
     #ovni{
         width: 50px;
         animation: ovni 5s ease-in-out;
@@ -525,6 +528,7 @@ p.legenda{
     /* ---------------------Conteudos vistos-------------------------------------------------  */
     .conteudo{
         display: block;
+        height: 80vh;
     }
     #speakConteudo{
         width: auto !important;
@@ -608,7 +612,9 @@ p.legenda{
         }
     }
     /*-----------contatos-----------------------------*/
-    
+    .contatos{
+        height: 80vh;
+    }
     .linkedin{
        height:18vw ;
        width: 18vw;
