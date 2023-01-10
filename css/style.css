@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Fredoka+One&display=swap');
 html,body{
-    background-image: linear-gradient(90deg, rgb(50, 26, 70), rgb(73, 22, 121));
-    background-color: linear;
+    background-image: linear-gradient(90deg, rgb(84, 44, 117), rgb(105, 32, 173));
     background-size: 400% 400%;
     font-family: 'Fredoka One', cursive;
     animation: bg 4s infinite ease-in-out;
@@ -61,46 +60,6 @@ html,body{
         transform: translateY(-300%);
         width: 0px ;
 
-    }
-}
-@media (min-width:1000px){
-    #eu{
-        width: 300px;
-       display:inherit;
-    }
-    #intro{
-        flex-direction:unset;
-    }
-    #speak{
-        font-size:2.5rem;
-
-    }
-    #speak2{
-        font-size:2rem;
-    }
-    @keyframes ovni{
-        0%{
-            transform: translateY(-300%);
-            
-        }
-        50%{
-            transform: translateY(0%);
-    
-            width: 500px;
-        }
-        55%{
-            transform: translateY(0%);
-    
-        }
-        59%{
-            transform: translateY(0%);
-    
-        }
-        100%{
-            transform: translateY(-300%);
-            width: 0px ;
-    
-        }
     }
 }
 
@@ -243,7 +202,6 @@ html,body{
 .projetoContainer{
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
     justify-content: center;
 
@@ -253,6 +211,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     
 
 }
@@ -307,12 +266,14 @@ visibility: hidden;
     -webkit-animation-delay: -2s;
 
 }
+/*--------------Contatos-------------------------------*/
 .contatos{
      height: 100vh;
      display: flex;
      justify-content: center;
      align-items: center;
      flex-direction: column;
+     text-align: center;
     
 }
 .contato{
@@ -320,37 +281,55 @@ visibility: hidden;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    flex-wrap: wrap;
+}
+.contato a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .linkedin{
     background-image: url("../img/linkedin.png");
-    height:200px ;
-    width: 200px;
+    height:150px ;
+    width: 150px;
     background-size: contain;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .github{
     background-image: url("../img/git.png");
-    height:200px ;
-    width: 200px;
+    height:150px ;
+    width: 150px;
     background-size: contain;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
 }
 .email{
     background-image: url("../img/email.png");
-    height:200px ;
-    width: 200px;
+    height:150px ;
+    width: 150px;
     background-size: contain;
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
 .telefone{
     background-image: url("../img/telefone.png");
-    height:200px ;
-    width: 200px;
+    height:150px ;
+    width: 150px;
     background-size: contain;
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
 .navLink{
     background-image: url("../img/nav.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
-    height: 150px;
+    height: 200px;
     position: fixed;
     top: 0px;
     right: 30px;
@@ -361,19 +340,307 @@ visibility: hidden;
 }
 .links{
     display: flex;
-flex-direction: column;
-justify-content: end;
-align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-image: url(../img/teste.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    visibility:hidden;
 }
 .links a{
     text-decoration: none;    
     color: black;
+    margin-top: 4px;
 }
-@-moz-keyframes voar {
+.links a:hover{
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 5px;
+}
+@keyframes voar {
     0% {
-        -moz-transform: rotate3d(0,0,1,5deg);    }
+        -moz-transform: rotate3d(0,0,1,5deg); 
+        transform: rotate3d(0,0,1,5deg);   }
     50%{
-        -moz-transform: rotate3d(0,0,1,0deg);    }
+        -moz-transform: rotate3d(0,0,1,0deg);  
+        transform: rotate3d(0,0,1,0deg);  }
     100% {
-        -moz-transform: rotate3d(0,0,1,5deg);    }
+        -moz-transform: rotate3d(0,0,1,5deg);
+        transform: rotate3d(0,0,1,5deg);    }
 }
+
+/*----------------------------------------------------media 800px --------------------------*/
+
+@media (min-width:560px) and (max-width:800px) {
+p{
+    font-size: 4vw !important;
+}
+p.legenda{
+    font-size: 18px !important;
+}
+#ovni{
+    width: 100px;
+    animation: ovni 5s ease-in-out;
+    transition: 3s;
+
+}
+#eu{
+    width: 200px;
+    opacity: 0;
+    animation: desova 3.5s infinite;
+    transition: 3s;
+}
+@keyframes ovni{
+    0%{
+        transform: translateY(-300%);
+        
+    }
+    50%{
+        transform: translateY(0%);
+
+        width: 400px;
+    }
+    55%{
+        transform: translateY(0%);
+    }
+    59%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-300%);
+        width: 0px ;
+
+    }
+}
+/* ---------------------Conteudos vistos-------------------------------------------------  */
+
+.centroCarrosel{
+    width: 200px;
+ 
+}
+.carrosel {
+    -webkit-perspective: 350px;
+    -moz-perspective: 350px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 100px;
+}
+
+.caixa__card img{
+    width: 70px;
+    height: 80px;
+
+}
+/* ---------------------------- projetos---------------*/
+
+
+#satelite{
+    animation: desova 3s infinite ease-in-out;
+    width: 150px;
+    height: 120px;
+}
+
+.cardProj{
+   
+    height: 100px;
+    width: 100px;
+  
+}
+
+.cardProj:hover{
+        
+        width: 250px;
+        border-radius: 10px;
+
+}
+/*-----------contatos-----------------------------*/
+
+.linkedin{
+   height:100px ;
+   width: 100px;
+}
+.github{
+   height:100px ;
+   width: 100px;
+}
+.email{
+   height:100px ;
+   width: 100px;  
+}
+.telefone{
+   height:100px ;
+   width: 100px;  
+}
+.navLink{
+    width: 100px;
+    height: 150px;
+}
+}
+
+/*----------------------------------------------------media 560px --------------------------*/
+@media (max-width:560px) {
+    p{
+        font-size: 5vw !important;
+    }
+    p.legenda{
+        font-size: 18px !important;
+    }
+    #ovni{
+        width: 50px;
+        animation: ovni 5s ease-in-out;
+        transition: 3s;
+    
+    }
+    #eu{
+        width: 150px;
+        opacity: 0;
+        animation: desova 3.5s infinite;
+        transition: 3s;
+    }
+    @keyframes ovni{
+        0%{
+            transform: translateY(-300%);
+            
+        }
+        50%{
+            transform: translateY(0%);
+    
+            width: 250px;
+        }
+        55%{
+            transform: translateY(0%);
+        }
+        59%{
+            transform: translateY(0%);
+        }
+        100%{
+            transform: translateY(-300%);
+            width: 0px ;
+    
+        }
+    }
+    /* ---------------------Conteudos vistos-------------------------------------------------  */
+    .conteudo{
+        display: block;
+    }
+    #speakConteudo{
+        width: auto !important;
+        margin-bottom: 40px;
+    }
+    .centroCarrosel{
+        width: 150px;
+     
+    }
+    .carrosel {
+        -webkit-perspective: 450px;
+        -moz-perspective: 450px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0 100px;
+    }
+    
+    .caixa__card img{
+        width: 70px;
+        height: 80px;
+    
+    }
+    /* ---------------------------- projetos---------------*/
+    
+    
+    #satelite{
+        animation: desova 3s infinite ease-in-out;
+        width: 130px;
+        height: 100px;
+    }
+    
+    .cardProj{
+       
+        height: 80px;
+        width: 80px;
+      
+    }
+    
+    .cardProj:hover{
+            
+            width: 220px;
+            border-radius: 10px;
+    
+    }
+    @-webkit-keyframes efeitoCarrosel {
+        from {
+            -webkit-transform: rotateY(360deg) translateZ(85px) rotateY(-360deg);
+            -moz-transform: rotateY(360deg) translateZ(85px) rotateY(-360deg);
+            z-index: 10;
+            opacity: 1
+        }
+    
+        50% {
+            z-index: -10;
+        }
+    
+        to {
+            -webkit-transform: rotateY(0deg) translateZ(85px) rotateY(0deg);
+            -moz-transform: rotateY(0deg) translateZ(85px) rotateY(0deg);
+            z-index: 10;
+            opacity: 1
+        }
+    }
+    
+    @-moz-keyframes efeitoCarrosel {
+        from {
+            -moz-transform: rotateY(360deg) translateZ(85px) rotateY(-360deg);
+            z-index: 10;
+            opacity: 1
+        }
+    
+        50% {
+            z-index: -10;
+        }
+    
+        to {
+            -moz-transform: rotateY(0deg) translateZ(85px) rotateY(0deg);
+            z-index: 10;
+            opacity: 1
+        }
+    }
+    /*-----------contatos-----------------------------*/
+    
+    .linkedin{
+       height:18vw ;
+       width: 18vw;
+    }
+    .github{
+       height:18vw ;
+       width: 18vw;
+    }
+    .email{
+       height:18vw ;
+       width: 18vw;  
+    }
+    .telefone{
+       height:18vw ;
+       width: 18vw;  
+    }
+    .navLink{
+        width: 100px;
+        height: 150px;
+    }
+    }
+    @media (max-width:770px){
+        .legenda{
+            visibility: visible;
+            
+            }
+        .divC:hover .legenda{
+            visibility: visible;
+        }
+        .cardProj:hover{
+        
+            width: 150px;
+            border-radius: 0px;
+    }
+    }

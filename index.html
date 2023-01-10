@@ -10,7 +10,7 @@
 <body>  
   
     <div class="space" style="display: flex; justify-content: center;
-    align-items: center;">  
+    align-items: center;" id="home">  
         <div class="intro" id="intro" >       
             <img id="ovni" src="img/ovni1.png"/>
             <img id="eu" src="img/eu.png"/>
@@ -22,11 +22,11 @@
         </div>        
     </div>
 
-    <div class="conteudo" data-scroll="left">
-        <div style="width: 30%;text-align: center;">
+    <div class="conteudo" data-scroll="left" id="tecnologias">
+        <div id="speakConteudo" style="width: 30%;text-align: center;">
             <p id="speak3" style="font-size: 35px; margin: 0px; ">Nessa viagem tive contato com algumas tecnologias e sigo estudando constantemente 🤓</p>
         </div>    
-        <div class="carrosel" onmouseover="mouseOn()" onmouseleave="mouseOff()">
+        <div class="carrosel">
             <img class="centroCarrosel" src="img/eu2.png"/>
        
             <div  class="caixa__card cc__1"><img src="img/html.png"/></div>
@@ -39,7 +39,7 @@
     </div>
 
 
-    <div class="projetoContainer" data-scroll="right">
+    <div class="projetoContainer" data-scroll="right" id="projetos">
         <div style="width: 60%;text-align: center;">
             <p id="speak4" style="font-size: 35px; margin: 0px; ">Usei essas tecnologias em projetos e freelances, enviei alguns deles até voce!👨🏾‍💻</p><br><br>
         </div> 
@@ -69,7 +69,7 @@
         
 </div>
 
-    <div class="contatos">
+    <div class="contatos" id="contatos">
         <p style="font-size: 35px; margin: 0px;"> Aqui estão minhas redes e contatos, Chame sempre que precisar!</p>
         <div class="contato">
             <a href="https://www.linkedin.com/in/igor-de-souza-rodrigues-aa0831165/" target="_blank"  style="text-decoration: none;text-align: center; color:black"><div class="linkedin" ></div> Igor de Souza Rodrigues</a>
@@ -79,8 +79,8 @@
         </div>
     </div>
 
-    <div class="navLink">
-        <div class="links">
+    <div class="navLink" id="nav">
+        <div class="links" id="links">
         <a href="#home">Inicio</a>
         <a href="#tecnologias">Tecnologias</a>
         <a href="#projetos">Projetos</a>
@@ -92,6 +92,8 @@
     <script src="js/jsOvni.js"></script>
     <script src="js/speak.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/nav.js"></script>
+
 
 </body>
 </html>

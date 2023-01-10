@@ -14,13 +14,12 @@ const debounce = function(func, wait, immediate) {
     };
   };
 
-
 const data = document.querySelectorAll('[data-scroll]');
 function scroll(){
     const TopoTela = window.pageYOffset+((window.innerHeight*3)/5);
     data.forEach(function(element){
         if(TopoTela > element.offsetTop){
-            element.classList.add('animacaoScroll')
+            element.classList.add('animacaoScroll');
         }
     })
       
@@ -33,15 +32,3 @@ if(data.length){
 },200));
 }
  
-var divs= document.getElementsByClassName("caixa__card")
-
-function mouseOn(){
-   for(const div of divs){
-       div.style.animationPlayState = "paused";
-   }   
-}
-function mouseOff(){
-   for(const div of divs){
-       div.style.animationPlayState = "running";
-   }   
-}
