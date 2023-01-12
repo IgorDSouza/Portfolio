@@ -655,6 +655,10 @@ p.legenda{
     .contatos{
         height: 80vh;
     }
+    .contatos a{
+        font-size: 4vw;
+        margin-left: 10px;
+    }
     .linkedin{
        height:18vw ;
        width: 18vw;
