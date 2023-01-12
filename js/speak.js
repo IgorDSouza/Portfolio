@@ -18,8 +18,10 @@ function content2(){
     if(j<contentSpeak2.length){
         document.getElementById('speak2').innerHTML += contentSpeak2.charAt(j);
         j++;
-        setTimeout(content2,vel);
-          
+        setTimeout(content2,vel);    
+    }
+    if(j==contentSpeak2.length){
+        btn.style.display='block';
     }
 }
 
