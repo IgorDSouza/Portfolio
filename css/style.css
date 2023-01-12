@@ -575,7 +575,7 @@ p.legenda{
     /* ---------------------Conteudos vistos-------------------------------------------------  */
     .conteudo{
         display: block;
-        height: 80vh;
+        height: 70vh;
     }
     #speakConteudo{
         width: auto !important;
