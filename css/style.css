@@ -601,7 +601,9 @@ p.legenda{
     }
     /* ---------------------------- projetos---------------*/
     
-    
+    .projetoContainer{
+        height: 70vh;
+    }
     #satelite{
         animation: desova 3s infinite ease-in-out;
         width: 130px;
