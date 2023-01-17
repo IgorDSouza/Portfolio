@@ -11,6 +11,7 @@
   ){
     data.forEach(function(element){
       element.classList.add('animacaoScroll');
+    })
       var timer = null;
 
             var c=0;
@@ -45,7 +46,6 @@
                         
                 }, 30);
             }, false);
-    })
   }
   else {
 // Debounce do Lodash
