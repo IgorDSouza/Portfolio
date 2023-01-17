@@ -11,7 +11,6 @@
   ){
     data.forEach(function(element){
       element.classList.add('animacaoScroll');
-<<<<<<< HEAD
       var timer = null;
 
             var c=0;
@@ -46,10 +45,6 @@
                         
                 }, 30);
             }, false);
-=======
-      arrow.style.display="none";
->>>>>>> 1fa2f3e1f400db148ba3c4860ac8fad10f084dc2
-
     })
   }
   else {
@@ -85,6 +80,30 @@ if(data.length){
   scroll();   
 },200));
 }
-  }
+  
+
+const arrow=document.getElementById("arrow");
+const contato = document.getElementById('contatos');
+
+
+window.addEventListener('scroll',debounce(function () {
+    console.log('dd')
+    if(pageYOffset >= contato.offsetTop){
+            arrow.style.transform="rotateX(180deg)";
+            arrow.style.cursor="pointer";
+            arrow.addEventListener('click',topwindow);
+            
+}else{
+    arrow.style.transform="rotateX(0deg)";
+            arrow.style.cursor="auto";
+            arrow.removeEventListener('click',topwindow);
+
+}
+},250))
+function topwindow(){
+            window.scrollTo(0,0);
+            
+}
+}
 
   
