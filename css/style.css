@@ -343,6 +343,7 @@ visibility: hidden;
     margin-right: 15px;
 
 }
+/*---------------------------- index 1 ----------------------------------------------------------------------*/
 .navLink{
     background-image: url("../img/nav.png");
     background-size: contain;
@@ -391,7 +392,15 @@ visibility: hidden;
         -moz-transform: rotate3d(0,0,1,5deg);
         transform: rotate3d(0,0,1,5deg);    }
 }
-
+.arrow{
+    animation: desova 0.8s infinite ease-in-out;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+#arrow{
+    width: 60px;
+}
 /*----------------------------------------------------media 800px --------------------------*/
 
 @media (min-width:560px) and (max-width:800px) {
