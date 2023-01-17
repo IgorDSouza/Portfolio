@@ -11,6 +11,7 @@
   ){
     data.forEach(function(element){
       element.classList.add('animacaoScroll');
+      arrow.style.display="none";
 
     })
   }
