@@ -88,10 +88,11 @@
             <a href="https://wa.me/5519981158430" target="_blank"  style="text-decoration: none;text-align: center; color:black"><div class="telefone"></div>(19)981158430</a>
         </div>
     </div>
+    <div id="alo"></div>
 
     <div class="navLink" id="nav">
         <div class="links" id="links">
-        <a id="navhome" href="#home">Inicio</a>
+        <a href="#home">Inicio</a>
         <a href="#tecnologias">Tecnologias</a>
         <a href="#projetos">Projetos</a>
         <a href="#contatos">Contatos</a>
@@ -102,49 +103,53 @@
         <img src="img/arrow.png"  id="arrow">
     </div>
 
-        <script>var timer = null;
-
-            var c=0;
-            window.addEventListener('scroll', function () {
-                const faltante = 50
-                const arrow=document.getElementById("arrow");
-                const home= document.getElementById('navhome');
-
-                function topwindow(){
-                            window.scrollTo(0,0);
-                            
-                }
-
-    
-                if (timer !== null) {
-                    clearTimeout(timer);
-                }
-                timer = setTimeout(function () {
-
-                        if (window.scrollMaxY-faltante < window.scrollY) {
-                            arrow.style.transform="rotateX(180deg)";
-                            arrow.style.cursor="pointer";
-                            arrow.addEventListener('click',topwindow);
-                            c++;
-
-                        }else if(c>0){
-                            arrow.style.transform="rotateX(0deg)";
-                            arrow.style.cursor="auto";
-                            arrow.removeEventListener('click',topwindow,true);
-                            c=0;
-                            
-
-                        }
-                        
-                }, 30);
-            }, false);
-            </script>
+        
     <script src="js/saibamais.js"></script>
     <script src="js/jsOvni.js"></script>
     <script src="js/speak.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/nav.js"></script>
+    <script>
 
+const debounce = function(func, wait, immediate) {
+    let timeout;
+    return function(...args) {
+      const context = this;
+      const later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+  
+  const arrow=document.getElementById("arrow");
+  const home= document.getElementById('navhome');
+  const contato = document.getElementById('contatos');
+  
+  
+  window.addEventListener('scroll',debounce(function () {
+      console.log('dd')
+      if(pageYOffset >= contato.offsetTop){
+              arrow.style.transform="rotateX(180deg)";
+              arrow.style.cursor="pointer";
+              arrow.addEventListener('click',topwindow);
+              
+  }else{
+      arrow.style.transform="rotateX(0deg)";
+              arrow.style.cursor="auto";
+              arrow.removeEventListener('click',topwindow);
+
+  }
+},250))
+  function topwindow(){
+              window.scrollTo(0,0);
+              
+  }
+        </script>
 
 </body>
 </html>
