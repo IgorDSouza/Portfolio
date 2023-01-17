@@ -11,6 +11,7 @@
   ){
     data.forEach(function(element){
       element.classList.add('animacaoScroll');
+<<<<<<< HEAD
       var timer = null;
 
             var c=0;
@@ -45,6 +46,9 @@
                         
                 }, 30);
             }, false);
+=======
+      arrow.style.display="none";
+>>>>>>> 1fa2f3e1f400db148ba3c4860ac8fad10f084dc2
 
     })
   }
@@ -83,3 +87,4 @@ if(data.length){
 }
   }
 
+  
