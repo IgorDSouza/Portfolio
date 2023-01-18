@@ -11,41 +11,7 @@
   ){
     data.forEach(function(element){
       element.classList.add('animacaoScroll');
-    })
-      var timer = null;
-
-            var c=0;
-            window.addEventListener('scroll', function () {
-                const faltante = 50
-                const arrow=document.getElementById("arrow");
-                function topwindow(){
-                            window.scrollTo(0,0);
-                            
-                }
-
-    
-                if (timer !== null) {
-                    clearTimeout(timer);
-                }
-                timer = setTimeout(function () {
-
-                        if (window.scrollMaxY-faltante < window.scrollY) {
-                            arrow.style.transform="rotateX(180deg)";
-                            arrow.style.cursor="pointer";
-                            arrow.addEventListener('click',topwindow);
-                            c++;
-
-                        }else if(c>0){
-                            arrow.style.transform="rotateX(0deg)";
-                            arrow.style.cursor="auto";
-                            arrow.removeEventListener('click',topwindow,true);
-                            c=0;
-
-
-                        }
-                        
-                }, 30);
-            }, false);
+    });
   }
   else {
 // Debounce do Lodash
@@ -81,29 +47,6 @@ if(data.length){
 },200));
 }
   
-
-const arrow=document.getElementById("arrow");
-const contato = document.getElementById('contatos');
-
-
-window.addEventListener('scroll',debounce(function () {
-    console.log('dd')
-    if(pageYOffset >= contato.offsetTop){
-            arrow.style.transform="rotateX(180deg)";
-            arrow.style.cursor="pointer";
-            arrow.addEventListener('click',topwindow);
-            
-}else{
-    arrow.style.transform="rotateX(0deg)";
-            arrow.style.cursor="auto";
-            arrow.removeEventListener('click',topwindow);
-
-}
-},250))
-function topwindow(){
-            window.scrollTo(0,0);
-            
-}
 }
 
   
