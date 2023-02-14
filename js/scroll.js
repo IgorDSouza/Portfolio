@@ -10,7 +10,7 @@
   || navigator.userAgent.match(/Windows Phone/i)
   ){
       arrow.style.display="none";
-
+    
   }
   else {
 // Debounce do Lodash
@@ -45,6 +45,7 @@ if(data.length){
   scroll();   
 },200));
 }
-  }
+  
+}
 
   
