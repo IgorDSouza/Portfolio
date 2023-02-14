@@ -9,11 +9,8 @@
   || navigator.userAgent.match(/BlackBerry/i)
   || navigator.userAgent.match(/Windows Phone/i)
   ){
-    data.forEach(function(element){
-      element.classList.add('animacaoScroll');
       arrow.style.display="none";
 
-    })
   }
   else {
 // Debounce do Lodash
